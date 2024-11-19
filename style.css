@@ -1,0 +1,12 @@
+@media (min-width:306px) {
+    #media{
+        width: 160%;
+        font-size: 100%;
+    }
+}
+
+body{
+    background-color: black;
+}
+
+

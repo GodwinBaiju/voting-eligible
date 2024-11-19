@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Voting</title>
+</head>
+<body>
+    <div class="row me-5">
+        <div class="col-lg-3 col-xl-3 col-md-2 col-sm-3 col-xs-1"></div>
+        <div class="col-lg-5  col-xl-4 col-md-6 col-sm-6 col-xs-10 pe-5 me-2 mt-5">
+            <div id="media" style="background-image: linear-gradient(to bottom right,rgb(0, 14, 141),rgb(0, 0, 0));" class="border rounded border-bg-secondary text-center mt-5 me-5 p-3">
+                <h1 class="text-white mt-4 mb-4">VOTING ELIGIBILITY</h1>
+                <div class="mb-5 mt-3 ms-3 d-flex p-2">
+                    
+                    <input id="age" type="text" class="form-control w-75 d-flex ms-2" placeholder="Enter your Age">
+                    
+                    <button onclick="agecheck()" type="button" class="btn ms-2 d-flex text-white bg-success ">submit</button>
+                    
+                  </div>
+                  <div id="result" class="mb-5"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-xl-6 col-md-4 col-sm-3 col-xs-2"></div>
+    </div>
+</body>
+<script>
+
+function agecheck(){
+    if(age.value ){
+        if(age.value>=18){
+            result.innerHTML = `<h5 class="text-success">Eligible for voting</h5>`
+        }else{
+            result.innerHTML = `<h5 class="text-danger">Not Eligible for voting</h5>`
+        }
+
+    }
+    else{
+        alert('please input any number!')
+    }
+    
+}
+
+</script>
+</html>
